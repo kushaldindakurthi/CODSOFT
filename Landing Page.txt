@@ -1,0 +1,275 @@
+#HTML Code
+******************************************************************************************************************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kushal's Landing Page</title>
+</head>
+<body>
+    <header>
+        <h1>CodSoft</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Testimonals</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to CODSOFT</h2>
+        <p>Explore Groundbreaking Features Set to Redefine Your Everyday!</p>
+        <p>Sign in / Sign up to enjoy the service</p>
+        <!-- Sign In Form -->
+        <button onclick="openSignInForm()" class="cta-button">Sign In</button>
+        <!-- Sign Up Form -->
+        <button onclick="openSignUpForm()" class="cta-button">Sign Up</button>
+    </section>
+
+    
+    <div id="signInModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignInForm()">&times;</span>
+            <h2>Sign In</h2>
+            <form action="signin.html" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <div id="signUpModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignUpForm()">&times;</span>
+            <h2>Sign Up</h2>
+            <form action="signup.html" method="POST">
+                <label for="newUsername">Username:</label>
+                <input type="text" id="newUsername" name="newUsername" required>
+                <label for="newEmail">Email:</label>
+                <input type="email" id="newEmail" name="newEmail" required>
+                <label for="newPhone">Phone Number:</label>
+                <input type="tel" id="newPhone" name="newPhone" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            &copy; 2024 CodSoft. All rights reserved.<br>
+            Kushal Dindakurthi <br>
+            Web Development Internship (Level 1: Task 1)
+        </p>
+    </footer>
+
+    <script>
+        
+        var signInModal = document.getElementById("signInModal");
+        var signUpModal = document.getElementById("signUpModal");
+
+        
+        var signInBtn = document.getElementsByClassName("cta-button")[0];
+        var signUpBtn = document.getElementsByClassName("cta-button")[1];
+
+        
+        var closeSignInBtn = document.getElementsByClassName("close")[0];
+        var closeSignUpBtn = document.getElementsByClassName("close")[1];
+
+        
+        function openSignInForm() {
+            signInModal.style.display = "block";
+        }
+
+        function openSignUpForm() {
+            signUpModal.style.display = "block";
+        }
+
+        
+        function closeSignInForm() {
+            signInModal.style.display = "none";
+        }
+
+        function closeSignUpForm() {
+            signUpModal.style.display = "none";
+        }
+
+        
+        window.onclick = function(event) {
+            if (event.target == signInModal) {
+                signInModal.style.display = "none";
+            } else if (event.target == signUpModal) {
+                signUpModal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
+**************************************************************************************************************************
+
+
+#CSS Code 
+
+***************************************************************************************************************************
+
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+header {
+  background-color: #2C2C2C;
+  color: #fff;
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.hero {
+  background-image: url("th1.jpeg");
+  background-size: cover;
+  text-align: center;
+  padding: 140px 0;
+  color: #000000;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 10px; 
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  overflow: auto; 
+}
+
+
+.modal-content {
+    background-color: #fefefe; 
+    margin: 10% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    max-width: 400px; 
+    text-align: left; 
+  }
+  
+  .modal-content label {
+    display: block; 
+    margin-bottom: 5px; 
+  }
+  
+  .modal-content input {
+    width: calc(100% - 20px);
+    padding: 5px; 
+    margin-bottom: 10px; 
+  }
+  
+  
+  .modal-content button {
+    display: block; 
+    width: 100%;
+    padding: 10px 0; 
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+.cta-button:hover {
+  background-color: #ff8533; 
+}
+
+.cta-button:focus {
+  outline: none; 
+}
+
+.cta-button:active {
+  background-color: #e65c00; 
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }

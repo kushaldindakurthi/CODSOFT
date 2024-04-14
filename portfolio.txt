@@ -1,0 +1,189 @@
+#HTML Code
+******************************************************************************************************************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kushal Dindakurthi's Portfolio</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Kushal Dindakurthi</h1>
+            <p>Web Developer | App Developer</p>
+        </div>
+        <img src="profile.jpg" alt="Kushal Dindakurthi" style="width: 7%; height: auto;">
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm Kushal Dindakurthi, a driven Bachelor of Technology candidate specializing in Artificial Intelligence and Machine Learning at IARE College, Hyderabad. I find myself deeply immersed in the realms of web designing and app development.</p>
+            <p>My journey in the world of technology has been marked by a profound love for coding. Proficient in Python and C, I thrive on the challenges of crafting elegant solutions and bringing ideas to life through code.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>C</li>
+                <li>Frontend Development</li>
+                <li>Java</li>
+                <li>App Development</li>
+            </ul>
+        </section>
+
+        <div class="project">
+            <h2>NPTEL - The Joy of Computing Using Python</h2>
+            <a href="image.png" class="view-button">View</a>
+          </div>
+          
+          <div class="project">
+            <h2>Cisco Networking Academy - Programming Essentials in Python</h2>
+            <a href="cisco.jpeg" class="view-button">View</a>
+          </div>
+
+        <section id="resume">
+            <h2>Resume</h2>
+            <button><a href="resume.pdf" target="_blank">VIEW</a></button>
+        </section>
+
+        <section id="social-media">
+            <h2>Social Media</h2>
+            <a target="_blank" href="https://www.instagram.com/kushal_dindakurthi?igsh=MWVjeW5veG9oZWM2Yw==">
+              <img src="instagram.png" alt="Instagram" class="sm_icon">
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/kushaldindakurthi/">
+              <img src="linkedin.jpeg" alt="LinkedIn" class="sm_icon">
+            </a>
+          </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:kushal29d@gmail.com">kushal29d@gmail.com</a></p>
+            <p>Phone: <a href="tel:+917794981546">7794981546</a></p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Kushal Dindakurthi</p>
+        <p>All rights reserved</p>
+        <p>Web Development  Level 1 - Task 2</p>
+    </footer>
+</body>
+</html>
+**************************************************************************************************************************
+
+
+#CSS Code 
+
+***************************************************************************************************************************
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#fff ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #5C6E58;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color:#d1ebcc;
+    color: #2C2C2C;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    padding: 20px;
+}
+
+#about img {
+    display: block;
+    margin-left: auto;
+    width: 10%; 
+    max-width: 90px; 
+    height: auto; 
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+.view-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 0px;
+    border-radius: 4px;
+  }
+  
+.view-button:hover {
+    background-color: #3e8e41;
+  }
+.project {
+    text-align: center;
+  }
+#resume button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#resume button a {
+    color: white;
+    text-decoration: none;
+}
+
+.sm_icon {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+#contact {
+    text-align: center;
+    
+}
+
+#contact p {
+    margin: 5px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #FFFFE0;
+    color: #5C6E58;
+    width: 100%;
+}
+
+
